@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/hyd.css' %}">
+</head>
+<body>
+     <h1><u>Hyderabad Jobs Information</u></h1>
+     {% if jobs_list %}
+     <table border="1">
+         <thead>
+             <th>Date</th>
+             <th>Company</th>
+             <th>Title</th>
+             <th>Address</th>
+             <th>Email</th>
+             <th>Phonenumber</th>
+         </thead>
+         <tbody>
+             {% for job in jobs_list %}
+             <tr>
+                 <td>{{ job.date }}</td>
+                 <td>{{ job.company }}</td>
+                 <td>{{ job.title }}</td>
+                 <td>{{ job.address }}</td>
+                 <td>{{ job.email }}</td>
+                 <td>{{ job.phonenumber }}</td>
+             </tr>
+             {% endfor %}
+         </tbody>
+     </table>
+     {% else %}
+     <p>No Jobs in Hyderabad</p>
+     {% endif %}
+</body>
+</html>

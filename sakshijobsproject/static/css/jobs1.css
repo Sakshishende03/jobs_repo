@@ -1,0 +1,17 @@
+body{
+background-color:pink;
+}
+.container{
+   margin-top:200px;
+   text-align:center;
+}
+.jumbotron a{
+   background:black;
+   color:white;
+   border:2px solid green;
+
+}
+.container jumbotron{
+   background:red;
+   color:white
+}
